@@ -1,0 +1,165 @@
+{
+  "consolidated_weather": [
+    {
+      "id": 6233976901468160,
+      "weather_state_name": "Light Cloud",
+      "weather_state_abbr": "lc",
+      "wind_direction_compass": "SSW",
+      "created": "2018-10-13T04:40:43.781590Z",
+      "applicable_date": "2018-10-13",
+      "min_temp": 3.5375,
+      "max_temp": 15.9475,
+      "the_temp": 15.23,
+      "wind_speed": 4.1608873512023115,
+      "wind_direction": 196.01083553411883,
+      "air_pressure": 1025.04,
+      "humidity": 81,
+      "visibility": 9.997862483098704,
+      "predictability": 70
+    },
+    {
+      "id": 5405387918409728,
+      "weather_state_name": "Light Cloud",
+      "weather_state_abbr": "lc",
+      "wind_direction_compass": "SSW",
+      "created": "2018-10-13T04:40:47.563403Z",
+      "applicable_date": "2018-10-14",
+      "min_temp": 3.7225,
+      "max_temp": 16.38,
+      "the_temp": 12.59,
+      "wind_speed": 3.8043833346589255,
+      "wind_direction": 192.9842514889627,
+      "air_pressure": 1017.08,
+      "humidity": 75,
+      "visibility": 9.997862483098704,
+      "predictability": 70
+    },
+    {
+      "id": 6728892391882752,
+      "weather_state_name": "Light Cloud",
+      "weather_state_abbr": "lc",
+      "wind_direction_compass": "S",
+      "created": "2018-10-13T04:40:49.658894Z",
+      "applicable_date": "2018-10-15",
+      "min_temp": 3.385,
+      "max_temp": 16.295,
+      "the_temp": 13.84,
+      "wind_speed": 5.351270314695512,
+      "wind_direction": 173.32847239257757,
+      "air_pressure": 1013.68,
+      "humidity": 71,
+      "visibility": 9.997862483098704,
+      "predictability": 70
+    },
+    {
+      "id": 4772472276647936,
+      "weather_state_name": "Light Cloud",
+      "weather_state_abbr": "lc",
+      "wind_direction_compass": "S",
+      "created": "2018-10-13T04:40:52.265303Z",
+      "applicable_date": "2018-10-16",
+      "min_temp": 4.4399999999999995,
+      "max_temp": 16.07,
+      "the_temp": 12.98,
+      "wind_speed": 6.391859142607174,
+      "wind_direction": 183.663911814407,
+      "air_pressure": 1010.05,
+      "humidity": 72,
+      "visibility": 9.997862483098704,
+      "predictability": 70
+    },
+    {
+      "id": 4847670040461312,
+      "weather_state_name": "Clear",
+      "weather_state_abbr": "c",
+      "wind_direction_compass": "SSW",
+      "created": "2018-10-13T04:40:55.782479Z",
+      "applicable_date": "2018-10-17",
+      "min_temp": 5.7425,
+      "max_temp": 17.4075,
+      "the_temp": 17.38,
+      "wind_speed": 4.83779076857817,
+      "wind_direction": 206.30772330839608,
+      "air_pressure": 1012.74,
+      "humidity": 75,
+      "visibility": 9.997862483098704,
+      "predictability": 68
+    },
+    {
+      "id": 5864000097091584,
+      "weather_state_name": "Clear",
+      "weather_state_abbr": "c",
+      "wind_direction_compass": "SSW",
+      "created": "2018-10-13T04:40:58.264982Z",
+      "applicable_date": "2018-10-18",
+      "min_temp": 6.8475,
+      "max_temp": 17.635,
+      "the_temp": 18.76,
+      "wind_speed": 4.966331026803467,
+      "wind_direction": 198.66002036148035,
+      "air_pressure": 1010.93,
+      "humidity": 77,
+      "visibility": 9.997862483098704,
+      "predictability": 68
+    }
+  ],
+  "time": "2018-10-13T08:20:03.178612+03:00",
+  "sun_rise": "2018-10-13T07:33:15.114568+03:00",
+  "sun_set": "2018-10-13T18:17:50.040048+03:00",
+  "timezone_name": "LMT",
+  "parent": {
+    "title": "Belarus",
+    "location_type": "Country",
+    "woeid": 23424765,
+    "latt_long": "53.711048,27.973749"
+  },
+  "sources": [
+    {
+      "title": "BBC",
+      "slug": "bbc",
+      "url": "http://www.bbc.co.uk/weather/",
+      "crawl_rate": 180
+    },
+    {
+      "title": "Forecast.io",
+      "slug": "forecast-io",
+      "url": "http://forecast.io/",
+      "crawl_rate": 480
+    },
+    {
+      "title": "HAMweather",
+      "slug": "hamweather",
+      "url": "http://www.hamweather.com/",
+      "crawl_rate": 360
+    },
+    {
+      "title": "OpenWeatherMap",
+      "slug": "openweathermap",
+      "url": "http://openweathermap.org/",
+      "crawl_rate": 360
+    },
+    {
+      "title": "Weather Underground",
+      "slug": "wunderground",
+      "url": "https://www.wunderground.com/?apiref=fc30dc3cd224e19b",
+      "crawl_rate": 720
+    },
+    {
+      "title": "World Weather Online",
+      "slug": "world-weather-online",
+      "url": "http://www.worldweatheronline.com/",
+      "crawl_rate": 360
+    },
+    {
+      "title": "Yahoo",
+      "slug": "yahoo",
+      "url": "http://weather.yahoo.com/",
+      "crawl_rate": 180
+    }
+  ],
+  "title": "Minsk",
+  "location_type": "City",
+  "woeid": 834463,
+  "latt_long": "53.90255,27.563101",
+  "timezone": "Europe/Minsk"
+}
