@@ -1,6 +1,6 @@
 import argparse
 
-from app import main
+from app import weather_lib
 
 
 def run():
@@ -9,7 +9,8 @@ def run():
     parser.add_argument('city')
     args = parser.parse_args()
 
-    city_info = main.get_city_info(args.city)
-    if city_info:
-        stdout = main.format_output(main.get_weather_by_city_id(city_info['woeid']))
-        print(stdout)
+    try:
+        print(weather_lib.get_forecast(args.city))
+    except (LookupError, AssertionError) as e:
+        print(e)
+        exit(1)

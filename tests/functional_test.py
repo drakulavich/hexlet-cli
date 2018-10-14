@@ -1,45 +1,33 @@
-from app import main
+import httpretty
+
+from app import weather_lib
+from tests.test_data import data_path, read_file
+
+WEATHER_OUTPUT_FILE: str = data_path('api', 'weather.json')
+CITY_OUTPUT_FILE: str = data_path('api', 'city.json')
 
 
-def test_get_city_info_by_name():
-    payload = main.get_city_info('minsk')
-    assert payload['title'] == 'Minsk'
-    assert payload['location_type'] == 'City'
-    assert payload['woeid'] == 834463
+@httpretty.activate
+def test_get_weather():
 
-
-def test_get_city_info_by_name_not_existed():
-    payload = main.get_city_info('hexlet')
-    assert payload is None
-
-
-def test_get_weather_by_city_id():
-    payload = main.get_weather_by_city_id(834463)
-
-    assert len(payload['consolidated_weather']) > 1
-    assert payload['parent']['title'] == 'Belarus'
-
-    summary_key_set = (
-        'sun_rise',
-        'sun_set',
-        'timezone_name',
-        'timezone'
+    httpretty.register_uri(
+        httpretty.GET,
+        weather_lib.API_CITY_ID_URL.format('minsk'),
+        body=read_file(CITY_OUTPUT_FILE)
     )
-    assert all(k in payload for k in summary_key_set)
 
-    current_day_weather = payload['consolidated_weather'][0]
-    daily_weather_key_set = (
-        'weather_state_name',
-        'applicable_date',
-        'created',
-        'min_temp',
-        'max_temp',
-        'the_temp',
-        'wind_speed',
-        'wind_direction',
-        'air_pressure',
-        'humidity',
-        'visibility',
-        'predictability'
+    httpretty.register_uri(
+        httpretty.GET,
+        weather_lib.API_CITY_WEATHER_URL.format('834463'),
+        body=read_file(WEATHER_OUTPUT_FILE)
     )
-    assert all(k in current_day_weather for k in daily_weather_key_set)
+
+    expected_result = (
+        'Current: 15.23 °C\n'
+        'Min: 3.54 °C\n'
+        'Max: 15.95 °C\n'
+        'Wind speed: 4.2 m/s\n'
+        'Humidity: 81 %\n'
+        'Air pressure: 1025.0 mbar'
+    )
+    assert str(weather_lib.get_forecast('minsk')) == expected_result
